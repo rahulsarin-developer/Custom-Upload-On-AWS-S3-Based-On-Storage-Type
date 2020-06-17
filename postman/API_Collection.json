@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "d733019b-7cd3-4192-8537-eee6e4bbde58",
+		"name": "API_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Files on AWS S3 Private Bucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image1.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image2.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/uploads?storageType=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"uploads"
+					],
+					"query": [
+						{
+							"key": "storageType",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Files on Local File System",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image1.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image2.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/uploads?storageType=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"uploads"
+					],
+					"query": [
+						{
+							"key": "storageType",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Files on Both - AWS S3 & Local File System",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image1.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image2.jpg"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/Images/image3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/aws/uploads?storageType=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"aws",
+						"uploads"
+					],
+					"query": [
+						{
+							"key": "storageType",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
